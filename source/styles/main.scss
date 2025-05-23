@@ -2,4 +2,13 @@
 
 body{
     background-color: variaveis.$corPrincipal;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h1{
+        color: variaveis.$corDeTexto;
+        font-size: 120px;
+    }
 }

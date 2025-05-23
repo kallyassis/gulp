@@ -35,7 +35,7 @@ function compilaSass() {
 
 
 exports.default = function () {
-    gulp.watch('./source/styles/*.scss', gulp.series(compilaSass))
-    gulp.watch('./source/script/*.js', gulp.series(comprimeJS))
-    gulp.watch('./source/image/*', gulp.series(comprimeImage))
+    gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, gulp.series(compilaSass))
+    gulp.watch('./source/script/*.js',  {ignoreInitial: false}, gulp.series(comprimeJS))
+    gulp.watch('./source/image/*', {ignoreInitial: false}, gulp.series(comprimeImage))
 }
