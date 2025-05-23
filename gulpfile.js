@@ -7,16 +7,16 @@ const obfuscate = require('gulp-obfuscate') //Dificulta a leitura do CÓDIGO jav
 const images = require('gulp-imagemin') //Comprime imagens no geral
 
 function comprimeImage() {
-    return  gulp.src('./source/image/*')
+    return  gulp.src('./source/image/**/*.{jpg,jpeg,png,gif,svg}')
     .pipe(images())
-    .pipe(gulp.dest('./build/image'))
+    .pipe(gulp.dest('./build/image'));
 }
 
 function comprimeJS() {
     return gulp.src('./source/script/*.js')
     .pipe(uglify())
     .pipe(obfuscate()) //Dificulta a leitura do CÓDIGO javascript
-    .pipe(gulp.dest('./build/script'))
+    .pipe(gulp.dest('./build/script'));
     
 }
 
